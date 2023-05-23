@@ -23,7 +23,7 @@ void loop() {
   float power = 230.0 * current_rms;
 
   print_measure("Irms: ", current_rms, "A, ");
-  delay(2);
+  delay(5);
   
   
 }
@@ -37,7 +37,7 @@ float get_corriente() {
 
   int counter = 0;
 
-  while(millis() - t < 2){
+  while(millis() - t < 5){
     volt = analogRead(A1) * ADCV / 1023.0;
     c = f(volt, VMIN, VMAX, -FACTOR, FACTOR);
 
