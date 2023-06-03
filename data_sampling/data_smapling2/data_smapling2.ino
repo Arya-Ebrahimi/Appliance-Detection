@@ -20,14 +20,9 @@ void loop()
   unsigned long previousMillis = millis();
   int count = 0;
   double Irms = 0;
-//  while ((millis() - previousMillis) < 200)
-//  {
-//    Irms += emon1.calcIrms(56);  // Calculate Irms only
-// 5588 samples per second
-//    count++;
-//  }
-//  
-//  Irms = Irms/count;
+
+  // 5588 samples per second
+
   Irms = emon1.calcIrms(112);
   print_measure("Irms: ", Irms, "A, ");
 
