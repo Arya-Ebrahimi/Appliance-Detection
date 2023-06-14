@@ -7,7 +7,7 @@ from librosa.feature import melspectrogram
 
 SAMPLE_RATE = 500
 PERIOD = 1/SAMPLE_RATE
-EPSILON = 30
+EPSILON = 20
 
 s = serial.Serial('/dev/ttyACM0', 9600, timeout=1)
 nums = re.compile(r"[+-]?\d+(?:\.\d+)?")
@@ -57,13 +57,13 @@ while True:
                             sign = -1.0
                     
                     # print(sign)
-                    S = melspectrogram(y=np.array(derivative, dtype='float32'),sr=SAMPLE_RATE,n_mels=192,n_fft=1024,hop_length=16)
+                    S = melspectrogram(y=np.array(derivative, dtype='float32'),sr=SAMPLE_RATE,n_mels=128,n_fft=1024,hop_length=16)
                     S = S * sign
                         
-                    plt.figure(figsize=(192, 33))
-                    plt.pcolormesh(np.arange(0, 33), np.arange(0, 192), S)
+                    plt.figure(figsize=(128, 33))
+                    plt.pcolormesh(np.arange(0, 33), np.arange(0, 128), S)
                     plt.axis('off')
-                    plt.savefig('data/'+str(num)+'-'+str(j)+'.png', bbox_inches='tight', pad_inches=0)
+                    plt.savefig('data/'+str(num)+'-'+str(j)+'1.png', bbox_inches='tight', pad_inches=0)
 
 
                 num+=1
