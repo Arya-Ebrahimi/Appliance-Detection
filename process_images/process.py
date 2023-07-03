@@ -1,7 +1,7 @@
 from PIL import Image                                              
 import os, sys                       
 
-path = 'images/'
+path = 'data/'
 dirs = os.listdir(path=path)                                       
 
 # print(dirs)

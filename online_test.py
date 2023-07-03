@@ -12,7 +12,7 @@ import tensorflow as tf
 
 SAMPLE_RATE = 500
 PERIOD = 1/SAMPLE_RATE
-EPSILON = 15
+EPSILON = 10
 
 s = serial.Serial('/dev/ttyACM0', 9600, timeout=1)
 nums = re.compile(r"[+-]?\d+(?:\.\d+)?")
@@ -51,10 +51,10 @@ while True:
                     derivative.append(delta)
                     
                     
-                    if sign >= 0:
-                        sign = +1.0
-                    else:
-                        sign = -1.0
+                if sign >= 0:
+                    sign = +1.0
+                else:
+                    sign = -1.0
                 
                     # print(sign)
                 S = melspectrogram(y=np.array(derivative, dtype='float32'),sr=SAMPLE_RATE,n_mels=128,n_fft=1024,hop_length=16)
@@ -75,15 +75,19 @@ while True:
 
                 img = fig2img(fig) 
                 img = img.convert('RGB')
+                img.save('ims/img.png')
                 nimg = np.array(img)
-                print(nimg.shape)
+                # print(nimg.max())
+                nimg = nimg / 255.0
+                plt.close()
                 a = np.transpose(nimg, (1, 0, 2))
                 a = a.reshape((1, 128, 32, 3))
-                tensor1 = tf.convert_to_tensor(a)
 
-                print(model(tensor1))
-                    # plt.savefig('data/'+str(num)+'-'+str(j)+'3.png', bbox_inches='tight', pad_inches=0)
-                    # plt.close()
+                output = model(a)
+                
+                output = np.array(output)
+                print(output)
+
 
                 num+=1
                 samples = []
