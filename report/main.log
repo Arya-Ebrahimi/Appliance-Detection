@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2023.3.10)  3 JUL 2023 20:53
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2023.3.10)  4 JUL 2023 08:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -554,7 +554,11 @@ Package fontspec Info: Font family 'TimesNewRoman(0)' created for font 'Times
 
 LaTeX Info: Redefining \latinfont on input line 7.
 
-(./main.aux)
+(./main.aux
+
+LaTeX Warning: Label `fig:data' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 12.
@@ -602,21 +606,39 @@ LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
 LaTeX Font Info:    Font shape `TU/BZAR.TTF(0)/b/n' will be
 (Font)              scaled to size 20.73593pt on input line 24.
 LaTeX Font Info:    Font shape `TU/TimesNewRoman(0)/m/n' will be
-(Font)              scaled to size 12.0pt on input line 27.
+(Font)              scaled to size 12.0pt on input line 28.
+File: Images/1.jpg Graphic file (type bmp)
+<Images/1.jpg>
 [1
 
-] [2] (./main.aux)
+]
+File: Images/2.png Graphic file (type bmp)
+<Images/2.png>
+File: Images/3.png Graphic file (type bmp)
+<Images/3.png>
+ [2]
+File: Images/4.png Graphic file (type bmp)
+<Images/4.png>
+
+Overfull \hbox (9.42294pt too wide) in paragraph at lines 86--86
+ [][][][][][] 
+ []
+
+[3] [4] (./main.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 7614 strings out of 478181
- 182284 string characters out of 5854527
- 615807 words of memory out of 5000000
- 28056 multiletter control sequences out of 15000+600000
+ 7652 strings out of 478181
+ 182826 string characters out of 5854527
+ 616807 words of memory out of 5000000
+ 28086 multiletter control sequences out of 15000+600000
  474484 words of font info for 74 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 88i,8n,97p,1048b,249s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 88i,8n,97p,1048b,268s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (2 pages).
+Output written on main.pdf (4 pages).
