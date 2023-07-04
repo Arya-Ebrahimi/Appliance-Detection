@@ -86,8 +86,17 @@ while True:
                 output = model(a)
                 
                 output = np.array(output)
-                print(output)
-
+                print(output[0])
+                c = np.argmax(output[0])
+                
+                if c == 0:
+                    print('None')
+                elif c == 1:
+                    print('OFF')
+                elif c == 2:
+                    print('Hair_Straightener')
+                elif c == 3:
+                    print('Hair Dryer')
 
                 num+=1
                 samples = []

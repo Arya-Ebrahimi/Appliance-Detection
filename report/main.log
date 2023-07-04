@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2023.3.10)  4 JUL 2023 08:11
+This is XeTeX, Version 3.141592653-2.6-0.999993 (TeX Live 2022/dev/Debian) (preloaded format=xelatex 2023.3.10)  4 JUL 2023 10:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -620,7 +620,7 @@ File: Images/3.png Graphic file (type bmp)
 File: Images/4.png Graphic file (type bmp)
 <Images/4.png>
 
-Overfull \hbox (9.42294pt too wide) in paragraph at lines 86--86
+Overfull \hbox (9.42294pt too wide) in paragraph at lines 89--89
  [][][][][][] 
  []
 
