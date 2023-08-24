@@ -17,7 +17,7 @@ EPSILON = 10
 s = serial.Serial('/dev/ttyACM0', 9600, timeout=1)
 nums = re.compile(r"[+-]?\d+(?:\.\d+)?")
 
-model = tf.keras.models.load_model('iot_model.h5')
+model = tf.keras.models.load_model('model.h5')
 
 
 samples = []
